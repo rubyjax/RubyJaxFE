@@ -1,0 +1,13 @@
+form a {
+  margin-left: 5px;
+}
+
+.navbar-nav li {
+  display:inline;
+  margin:0 10px;
+}
+
+div.navbar {
+  background-color: #eee;
+  margin:10px;
+}
