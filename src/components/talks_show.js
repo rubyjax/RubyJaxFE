@@ -34,8 +34,8 @@ class TalksShow extends Component {
           Delete Talk
         </button>
         <h3>{talk.title}</h3>
-        <h6>Categories: {talk.categories}</h6>
-        <p>{talk.content}</p>
+        <h6>Category: {talk.category}</h6>
+        <p>{talk.description}</p>
       </div>
     );
   }

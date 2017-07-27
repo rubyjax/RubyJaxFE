@@ -37,13 +37,13 @@ class TalksNew extends Component {
           component={this.renderField}
         />
         <Field
-          label="Categories"
-          name="categories"
+          label="Category"
+          name="category"
           component={this.renderField}
         />
         <Field
           label="Talk Description"
-          name="content"
+          name="description"
           component={this.renderField}
         />
         <button type="submit" className="btn btn-primary">Submit</button>
@@ -54,18 +54,18 @@ class TalksNew extends Component {
 }
 
 function validate(values) {
-  // console.log(values) -> { title: 'asdf', categories: 'asdf', content: 'asdf' }
+  // console.log(values) -> { title: 'asdf', category: 'asdf', content: 'asdf' }
   const errors = {};
 
   // Validate the inputs from 'values'
   if (!values.title) {
     errors.title = "Enter a title";
   }
-  if (!values.categories) {
-    errors.categories = "Enter some categories";
+  if (!values.category) {
+    errors.category = "Enter some category";
   }
-  if (!values.content) {
-    errors.content = "Enter some content please";
+  if (!values.description) {
+    errors.description = "Enter some description please";
   }
 
   // If errors is empty, the form is fine to submit
