@@ -14,8 +14,13 @@ class TalksIndex extends Component {
       return (
         <li className="list-group-item" key={talk.id}>
           <Link to={`/talks/${talk.id}`}>
-            {talk.title}
+          <div className="title">
+            <strong>{talk.title}</strong>
+          </div> {/*title*/}
           </Link>
+          <div className="description">
+            {talk.description}
+          </div> {/*description*/}
         </li>
       );
     });
