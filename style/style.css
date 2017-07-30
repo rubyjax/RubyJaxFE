@@ -11,3 +11,13 @@ div.navbar {
   background-color: #eee;
   margin:10px;
 }
+
+.title {
+  font-size: 22px;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
