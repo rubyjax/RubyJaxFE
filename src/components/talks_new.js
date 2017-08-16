@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { createTalk } from "../actions";
 
 class TalksNew extends Component {
+
   renderField(field) {
     const { meta: { touched, error } } = field;
     const className = `form-group ${touched && error ? "has-danger" : ""}`;
@@ -12,7 +13,22 @@ class TalksNew extends Component {
     return (
       <div className={className}>
         <label>{field.label}</label>
-        <input className="form-control" type="text" {...field.input} />
+        <input className="form-control" type="text" {...field.input} /> 
+        <div className="text-help">
+          {touched ? error : ""}
+        </div>
+      </div>
+    );
+  }
+
+  rendertextArea(field) {
+    const { meta: { touched, error } } = field;
+    const className = `form-group ${touched && error ? "has-danger" : ""}`;
+
+    return (
+      <div className={className}>
+        <label>{field.label}</label>
+        <textarea className="form-control" {...field.input} ></textarea>
         <div className="text-help">
           {touched ? error : ""}
         </div>
@@ -44,7 +60,7 @@ class TalksNew extends Component {
         <Field
           label="Talk Description"
           name="description"
-          component={this.renderField}
+          component={this.rendertextArea}
         />
         <button type="submit" className="btn btn-primary">Submit</button>
         <Link to="/talks" className="btn btn-danger">Cancel</Link>
