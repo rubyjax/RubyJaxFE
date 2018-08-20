@@ -12,7 +12,7 @@ class TalksNew extends Component {
     return (
       <div className={className}>
         <label>{field.label}</label>
-        <input className="form-control" type="text" {...field.input} />
+        <textarea className="form-control" type="text" {...field.input} />
         <div className="text-help">
           {touched ? error : ""}
         </div>
